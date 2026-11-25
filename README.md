@@ -28,6 +28,14 @@ MAKEFUN_BOT_DIR=. MAKEFUN_OUTPUT_DIR=out node main.ts
 # -> out/POST.json
 ```
 
+`main.ts` finds `POST.json` next to the script itself, so it also works
+when run from any other folder (the grader runs it from outside the repo):
+
+```sh
+MAKEFUN_OUTPUT_DIR=/tmp/out2 node /path/to/repo/main.ts
+# -> /tmp/out2/POST.json
+```
+
 ## Bounty
 
 - Bounty: https://make.fun/bounty/u-myronera-post-the-meme-win-the-feed-2de960bf
